@@ -1,0 +1,97 @@
+<div class="account-dashboard">
+  <h1 class="account-dashboard-title pt-5 pb-3">Dashboard</h1>
+  <h3 class="account-dashboard-welcome py-3">WELCOME, BEAVERADMIN!</h3>
+  <p class="account-dashboard-desc py-3">Logged in
+    <span>as beaveradmin@company.com</span>
+  </p>
+  <div class="account-dashboard-image pb-3 small-show">
+    <img
+      class="account-mobile-logo"
+      src="https://cdn.shopify.com/s/files/1/0733/7354/8818/files/Image_430x.svg?v=1686084946"
+      alt="">
+  </div>
+  <div class="d-flex w-100 account-dashboard-referral my-4">
+    <input
+      class="w-75"
+      type="text"
+      readonly
+      value="Referral Code: BEAVERADMIN237">
+    <button class="w-25">COPY</button>
+  </div>
+  <p class="account-dashboard-refer-desc py-4">Refer one of your beaver friends to get $15 OFF your next purchase of at least $100 for both of you.</p>
+  <button class="account-dashboard-edit-btn button button--primary">Edit account details</button>
+</div>
+
+{% style %}
+  .account-dashboard-title {
+    font-family: Tiempos Headline;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  .account-dashboard-welcome {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  .account-dashboard-desc {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #58565c;
+  }
+  .account-dashboard-desc span {
+    color: #FA285A;
+  }
+  .account-dashboard-refer-desc {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #58565c;
+  }
+  .account-dashboard-edit-btn {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  .account-dashboard-referral {
+    height: 47px;
+  }
+  .account-dashboard-referral input {
+    border: 2px solid #191919;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .account-dashboard-referral button {
+    background: #191919;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    border: 0;
+    letter-spacing: 0;
+  }
+{% endstyle %}

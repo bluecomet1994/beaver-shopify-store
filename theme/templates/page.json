@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "bcf7f9f3-6d6a-4785-8c11-a4b7f7b8761c": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "f48471f6-68e3-45c5-bab5-0c3b9086b632": {
+      "type": "page-faq",
+      "settings": {
+      }
+    },
+    "7f153de9-cf0a-4685-accc-0944cab2264e": {
+      "type": "term-card",
+      "settings": {
+        "section_title": "Feel free to contact us!",
+        "text_1": "<p>Didn't find what you're looking for?<\/p>",
+        "text_2": "<p>Complete the form on our contact page to get in touch<\/p>",
+        "image": "shopify:\/\/shop_images\/Term_Card_Background.svg",
+        "color_scheme": "accent-1"
+      }
+    },
+    "46d454e2-20ba-49f7-bc4e-9a7e46d11141": {
+      "type": "beaver-out-main",
+      "settings": {
+        "number_of_products": 5,
+        "collection": "create-your-box"
+      }
+    }
+  },
+  "order": [
+    "bcf7f9f3-6d6a-4785-8c11-a4b7f7b8761c",
+    "main",
+    "f48471f6-68e3-45c5-bab5-0c3b9086b632",
+    "7f153de9-cf0a-4685-accc-0944cab2264e",
+    "46d454e2-20ba-49f7-bc4e-9a7e46d11141"
+  ]
+}

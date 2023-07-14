@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "bcd67f39-1def-4e96-93d8-584fb23dda0b": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-login",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "image": "shopify:\/\/shop_images\/contact_background.png",
+        "mobile_image": "shopify:\/\/shop_images\/login-back-mobile.png",
+        "mobile_image_password": "shopify:\/\/shop_images\/password-back-mobile.png"
+      }
+    }
+  },
+  "order": [
+    "bcd67f39-1def-4e96-93d8-584fb23dda0b",
+    "main"
+  ]
+}

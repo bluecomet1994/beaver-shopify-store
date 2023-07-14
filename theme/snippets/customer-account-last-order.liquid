@@ -1,0 +1,89 @@
+<div class="account-last-order">
+  <h2 class="account-last-order-title pb-5">Last Order</h2>
+  <div class="account-last-order-number d-flex justify-content-between align-items-center py-4">
+    <p>ORDER NUMBER: <span>BVR437438430</span></p>
+    <button>VIEW ORDER</button>
+  </div>
+  <div class="account-last-order-details py-4">
+    <table class="w-100">
+      <tr>
+        <th>Order Date</th>
+        <th>Total Cost</th>
+        <th>Status</th>
+        <th>Delivery Date</th>
+      </tr>
+      <tr>
+        <td>02 March 2023</td>
+        <td>$264.99</td>
+        <td>Paid</td>
+        <td>06 March 2023</td>
+      </tr>
+    </table>
+  </div>
+  <div class="account-last-order-products"></div>
+  <button class="account-last-order-view-btn button button--primary my-4">VIEW ALL ORDERS</button>
+</div>
+
+{% style %}
+  .account-last-order-title{
+    font-family: Tiempos Headline;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+  .account-last-order-number {
+    border-bottom: 2px solid #58565c33;
+  }
+  .account-last-order-number, .account-last-order-number button{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+  .account-last-order-number button{
+    background-color: transparent;
+    color: #191919;
+    border: 2px solid #191919;
+    padding: 2px 10px;
+  }
+  .account-last-order-details {
+    border-bottom: 2px solid #58565c33 !important;
+  }
+  .account-last-order-details tr th {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+  .account-last-order-details tr td {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+  table, tbody, tr, th, td {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .account-last-order-view-btn {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+{% endstyle %}

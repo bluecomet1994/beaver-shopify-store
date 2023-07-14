@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "image": "shopify:\/\/shop_images\/image-banner-Illustration.png",
+        "title": "Select your own Favorites",
+        "description": "Craft your own small, medium, large or extra large box with your favourite exotic snacks from all around the world.",
+        "active": 2,
+        "color_scheme": "inverse"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "db0c332f-ef39-4a2e-8759-650eaffc776d": {
+      "type": "term-card",
+      "settings": {
+        "section_title": "Choose a Pre-Made Box",
+        "text_1": "<p>Not sure what to pick?<\/p>",
+        "text_2": "<p>Choose from our carefully crafted treat boxes for all preferences<\/p>",
+        "image": "shopify:\/\/shop_images\/Term_Card_Background.svg",
+        "color_scheme": "yellow"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "db0c332f-ef39-4a2e-8759-650eaffc776d"
+  ]
+}

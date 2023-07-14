@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "bcf7f9f3-6d6a-4785-8c11-a4b7f7b8761c": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "bcf7f9f3-6d6a-4785-8c11-a4b7f7b8761c",
+    "main"
+  ]
+}

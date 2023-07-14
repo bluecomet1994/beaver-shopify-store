@@ -1,0 +1,57 @@
+<div class="beaver-out my-4">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center small-hide">
+      <h2 class="beaver-out-title">Who let the Beavers out?</h2>
+      <p>{%- render 'icon-instagram' -%}&nbsp;@Beavertreats</p>
+    </div>
+    <div class="small-show">
+      <h2 class="beaver-out-title">Who let the Beavers out?</h2>
+      <p>{%- render 'icon-instagram' -%}&nbsp;@Beavertreats</p>
+    </div>
+    <div class="row gx-4 gy-4 small-hide">
+      {%- for product in card_products limit: number_of_products -%}
+        <div class="col-sm">
+          <img
+            src={{ product.featured_media | image_url }}
+            alt="beaver out image"
+            class="beaver-out-image w-100" />
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="mobile-beaver-out small-show" style="gap: 10px">
+      {%- for product in card_products limit: number_of_products -%}
+        <div class="col-5">
+          <img
+            src={{ product.featured_media | image_url }}
+            alt="beaver out image"
+            class="beaver-out-image w-100" />
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+  .beaver-out-title {
+    font-family: Tiempos Headline;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .mobile-beaver-out {
+    display: inline-flex;
+    overflow: scroll;
+  }
+  @media screen and (max-width: 749px) {
+    .beaver-out-title {
+      font-family: Tiempos Headline;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 31px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  }
+{%- endstyle -%}

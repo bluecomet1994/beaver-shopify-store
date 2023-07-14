@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "ad19c408-db59-47fd-a8e2-0ab5c5fa3d38": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-register",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "image": "shopify:\/\/shop_images\/register-background.png"
+      }
+    }
+  },
+  "order": [
+    "ad19c408-db59-47fd-a8e2-0ab5c5fa3d38",
+    "main"
+  ]
+}

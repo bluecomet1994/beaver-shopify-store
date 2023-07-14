@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "27f93710-092b-4a44-9bb1-13858a45d941": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": true
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "content"
+      ],
+      "settings": {
+      }
+    },
+    "13b3122a-391a-489f-a450-865dc515a960": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Beaver Magazine",
+        "number_of_blogs": 8
+      }
+    }
+  },
+  "order": [
+    "27f93710-092b-4a44-9bb1-13858a45d941",
+    "main",
+    "13b3122a-391a-489f-a450-865dc515a960"
+  ]
+}

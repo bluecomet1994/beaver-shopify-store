@@ -1,0 +1,605 @@
+{% style %}
+  #create_box_modal {
+    position: fixed;
+    bottom: 0;
+    height: 261px;
+    background-color: #eeeeef;
+    z-index: 3;
+    border: 2px solid #191919;
+    border-bottom: none;
+  }
+  #box_level {
+    width: 70%;
+    max-width: 340px;
+  }
+  #box_level h3 {
+    margin-bottom: 0;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: right;
+    color: #FA285A;
+  }
+  #box_level h3:first-child,
+  #box_level h3:last-child {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #58565C;
+  }
+  #box_level p {
+    font-family: Tiempos Headline;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    padding: 10px 0;
+    color: #aeaeaf;
+    margin-bottom: 0;
+  }
+  #box_level span {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #fff;
+    background-color: #b2b1b4;
+    padding: 0 10px;
+    margin-left: 10px;
+  }
+  .box_level_active p {
+    font-size: 26px !important;
+    line-height: 31px !important;
+    padding: 11.5px 0;
+    color: #191919 !important;
+  }
+  .box_level_active span {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    background-color: #FA285A !important;
+    padding: 5px 10px !important;
+  }
+  #box_logo {
+    background-color: #fff;
+    width: 30%;
+    min-width: 120px;
+    min-height: 120px;
+    margin: 20px;
+  }
+  .level_divider {
+    height: 2px;
+    background-color: #58565C;
+    margin: 0;
+  }
+  .level_progress {
+    height: 30px;
+    margin-bottom: 26.5px;
+    border: 1px solid #58565C33;
+  }
+  .level_progress .progress-bar {
+    background-color: #FA285A;
+  }
+  .level_weight {
+    margin-top: 10px;
+    height: 21px;
+    position: relative;
+  }
+  .first_weight {
+    position: absolute;
+    left: 0;
+  }
+  .last_weight {
+    position: absolute;
+    right: 0;
+  }
+  .current_weight {
+    position: absolute;
+    left: calc(75% - 20px);
+  }
+  /* Carousel */
+
+  #featureContainer .card img {
+    width: 100%;
+    padding: 10px;
+  }
+  .carousel-item h3 {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .carousel-item h2 {
+    font-family: Tiempos Headline;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+  #featureContainer .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  #featureContainer .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+  #featureContainer .carousel-inner .carousel-item.active,
+  #featureContainer .carousel-inner .carousel-item-next,
+  #featureContainer .carousel-inner .carousel-item-prev {
+    display: flex;
+  }
+  @media(min-width: 768px) {
+
+    #featureContainer .carousel-inner .carousel-item-end.active,
+    #featureContainer .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    #featureContainer .carousel-inner .carousel-item-start.active,
+    #featureContainer .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+
+    #featureContainer .carousel-item {
+      justify-content: space-between;
+    }
+  }
+
+  #featureContainer .carousel-inner .carousel-item-end,
+  #featureContainer .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+  #featureContainer .card {
+    border: 0;
+  }
+  #featureContainer .card {
+    position: relative;
+  }
+  #featureContainer .card .card-img-overlays {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+  }
+  #featureContainer a {
+    text-decoration: none;
+  }
+  
+  .box_name_group {
+    padding-left: 50px;
+  }
+  
+  #featureContainer .float-end {
+    padding-top: 10px;
+  }
+  .indicator {
+    width: 32px;
+    height: 32px;
+    background-color: #58565C66;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  .box_detail_total {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+  }
+  .box_detail_price {
+    font-family: Tiempos Headline;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .box_detail_btn, .box_name_btn {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    padding: 0 2rem !important;
+  }
+  .box_give_name {
+    font-family: Tiempos Headline;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .box_name_detail {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .box_item {
+    max-width: 440px;
+    border: none;
+    border-bottom: 1px solid #191919;
+    padding: 5px;
+    width: 100%;
+  }
+  .toast-header strong {
+    font-size: 30px;
+    padding-left: 15px;
+  }
+  .toast-body {
+    font-size: 16px;
+    text-align: center;
+  }
+  .third_box {
+    background-color: #02BE861A;
+  }
+  .box_done_handle button {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+  }
+  .box_done {
+    padding-left: 50px;
+  }
+  .box_done h2 {
+    font-family: Tiempos Headline;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0em;
+  }
+  .box_done h4 {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+  }
+{% endstyle %}
+
+<div class="container" id="create_box_modal">
+  <div class="row h-100 first_box">
+    <div class="col-12 col-sm-4 h-100">
+      <div class="d-flex align-items-center h-100">
+        <div id="box_logo">
+          <img
+            id="box_logo_img"
+            class="w-100"
+            src="https://cdn.shopify.com/s/files/1/0733/7354/8818/files/nobg-IMG_9546_430x.png?v=1686538641">
+        </div>
+        <div id="box_level">
+          <div class="box_level_small box_level_active">
+            <p>Small Box<span>0 lb - 1 lb</span></p>
+          </div>
+          <hr class="level_divider" />
+          <div id="progress_small">
+            <div class="level_weight d-flex">
+              <h3 class="first_weight"></h3>
+              <h3 class="current_weight"></h3>
+              <h3 class="last_weight"></h3>
+            </div>
+            <div class="progress_content"></div>
+          </div>
+          <hr class="level_divider" />
+          <div class="box_level_medium">
+            <p>Medium Box<span>1 lb - 2,5 lb</span></p>
+          </div>
+          <hr class="level_divider" />
+          <div id="progress_medium">
+            <div class="level_weight d-flex">
+              <h3 class="first_weight"></h3>
+              <h3 class="current_weight"></h3>
+              <h3 class="last_weight"></h3>
+            </div>
+            <div class="progress_content"></div>
+          </div>
+          <hr class="level_divider" />
+          <div class="box_level_large">
+            <p>Large Box<span>2,5 lb - 5 lb</span></p>
+          </div>
+          <div id="progress_large">
+            <div class="level_weight d-flex">
+              <h3 class="first_weight"></h3>
+              <h3 class="current_weight"></h3>
+              <h3 class="last_weight"></h3>
+            </div>
+            <div class="progress_content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 h-100">
+      <div class="h-100 d-flex align-items-center justify-content-center" id="featureContainer">
+        <div class="row mx-auto my-auto justify-content-center">
+          <div
+            id="featureCarousel"
+            class="carousel slide d-flex align-items-center"
+            data-bs-ride="carousel">
+            <!-- Carousel Controls. OPTIONAL -->
+            <a
+              class="indicator order-1"
+              href="#featureCarousel"
+              role="button"
+              data-bs-slide="prev">
+              <
+            </a>
+            <a
+              class="w-aut indicator order-3"
+              href="#featureCarousel"
+              role="button"
+              data-bs-slide="next">
+              >
+            </a>
+            <!-- Add Slides To The Carousel -->
+            <div class="carousel-inner order-2" role="listbox">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-2 h-100">
+      <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+        <h3 class="box_detail_total">GRAND TOTAL</h3>
+        <h2 class="box_detail_price"></h2>
+        <button class="box_detail_btn button button--primary">ADD BOX TO CART</button>
+      </div>
+    </div>
+  </div>
+  <div class="row h-100 second_box">
+    <div class="col-12 col-md-8 h-100">
+      <div class="box_name_group h-100 d-flex flex-column justify-content-center align-items-start">
+        <h2 class="box_give_name">Give your box a name</h2>
+        <p class="box_name_detail">Before you add the box to cart, let's quickly give it a name, how should we call it?</p>
+        <input class="box_item" type="text" name="Boxname" id="box_name" placeholder="Name your box" />
+      </div>
+    </div>
+    <div class="col-12 col-md-4 h-100">
+      <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+        <h3 class="box_detail_total">GRAND TOTAL</h3>
+        <h2 class="box_detail_price"></h2>
+        <button id="box_name_btn" class="button button--primary" id="liveToastBtn">CONFIRM & ADD TO CART</button>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+          <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              {% render 'icon-logo' %}
+              <strong class="me-auto">BeaverTreats</strong>
+              <button type="button" class="btn-close px-3" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              Please input the box name!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="toastSuccess" class="toast" style="display: none" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        {% render 'icon-logo' %}
+        <strong class="me-auto">BeaverTreats</strong>
+        <button type="button" class="btn-close px-3" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        The Box is added successfully to the cart!
+      </div>
+    </div>
+  </div>
+  <div class="row h-100 third_box">
+    <div class="col-12 col-sm-6">
+      <div class="box_done h-100 d-flex flex-column justify-content-center">
+        <h2>Well Done!</h2>
+        <h4>{% render 'icon-bubble' %}YOUR BOX HAS BEEN ADDED TO CART</h4>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="box_done_handle d-flex h-100 gap-10 justify-content-center align-items-center">
+        <button class="box_continue_btn button button--primary mx-2">CONTINUE SHOPPING</button>
+        <button class="box_view_cart_btn button button--primary mx-2">VIEW CART</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // create interval to check the status of the box modal    
+    var bundleGroup = "[]"
+    var tmp = ''
+    var weight = 0
+    var price = 0
+    var itemInterval = setInterval(checkItem, 100)
+    var bundleGroup
+    var productGroup
+    function checkItem() {
+      if(localStorage.bundleGroup != bundleGroup)
+        {
+          bundleGroup = localStorage.bundleGroup
+          mainAction()
+        }
+    }
+    // Box
+    $(".second_box").hide()
+    $(".third_box").hide()
+    
+    // Main function
+    function mainAction() {
+      // Make the products lists
+      tmp = ''
+      weight = 0
+      price = 0
+      bundleGroup = JSON.parse(localStorage.getItem('bundleGroup'));
+      productGroup = JSON.parse(localStorage.getItem('productGroup'));
+      console.log(bundleGroup)
+      console.log(productGroup)
+      
+      bundleGroup.forEach((product, index) => {
+        if(index == 0)
+        {
+          if(productGroup[index].quantity == 1)
+            tmp += '<div class="carousel-item active"><div class="col-md-3"><div class="card"><div class="card-img"><img src="https:'+product.images[0]+'" class="img-fluid"></div><h3>'+product.title+'</h3><h2>$'+product.price/100+'</h2></div></div></div>'
+          else
+            tmp += '<div class="carousel-item active"><div class="col-md-3"><div class="card"><div class="card-img"><img src="https:'+product.images[0]+'" class="img-fluid"></div><h3>'+product.title+'</h3><h2>$'+product.price/100+' x '+ productGroup[index].quantity +'</h2></div></div></div>'
+        }
+        else {
+          if(productGroup[index].quantity == 1)
+            tmp += '<div class="carousel-item"><div class="col-md-3"><div class="card"><div class="card-img"><img src="https:'+product.images[0]+'" class="img-fluid"></div><h3>'+product.title+'</h3><h2>$'+product.price/100+'</h2></div></div></div>'
+          else
+            tmp += '<div class="carousel-item"><div class="col-md-3"><div class="card"><div class="card-img"><img src="https:'+product.images[0]+'" class="img-fluid"></div><h3>'+product.title+'</h3><h2>$'+product.price/100+' x '+ productGroup[index].quantity +'</h2></div></div></div>'
+        }
+        weight += product.variants[0].weight;
+        price += (product.price * productGroup[index].quantity)
+      })
+      
+      // Get the total price of box
+      price /= 100;
+      $(".box_detail_price").html("$"+price);
+
+      // convert g to lb
+      weight = weight/1000*2.2;
+      $(".carousel-inner").html(tmp);
+      weight = roundToOneDecimalPlace(weight);
+      
+      // Make the progress bar
+      var percentage = 0
+      if(weight <= 1) {
+        percentage = roundToOneDecimalPlace(weight * 100);
+        if(weight != 0 && weight != 1)
+          $(".current_weight").html(weight + " lb")      
+        $(".first_weight").html("0 lb")
+        $(".last_weight").html("1 lb")
+        $("#progress_small").show();
+        $("#progress_medium").hide();
+        $("#progress_large").hide();
+        $(".box_level_small").addClass('box_level_active');
+        $(".box_level_medium").removeClass('box_level_active');
+        $(".box_level_large").removeClass('box_level_active');
+      }
+      if(weight >1 && weight <=2.5) {
+        percentage = roundToOneDecimalPlace((weight - 1)/1.5 * 100)
+        if(weight != 1 && weight != 2.5)
+          $(".current_weight").html(weight + " lb")
+        $(".first_weight").html("1 lb")
+        $(".last_weight").html("2.5 lb")
+        $("#progress_small").hide();
+        $("#progress_medium").show();
+        $("#progress_large").hide();
+        $(".box_level_small").removeClass('box_level_active');
+        $(".box_level_medium").addClass('box_level_active');
+        $(".box_level_large").removeClass('box_level_active');
+      }
+      if(weight > 2.5 && weight <= 5) {
+        percentage = roundToOneDecimalPlace((weight - 2.5)/2.5 * 100)
+        if(weight != 2.5 && weight != 5)
+          $(".current_weight").html(weight + " lb")
+        $(".first_weight").html("2.5 lb")
+        $(".last_weight").html("5 lb")
+        $("#progress_small").hide();
+        $("#progress_medium").hide();
+        $("#progress_large").show();
+        $(".box_level_small").removeClass('box_level_active');
+        $(".box_level_medium").removeClass('box_level_active');
+        $(".box_level_large").addClass('box_level_active');
+      }
+      tmp = '<div class="progress level_progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar progress-bar-striped progress-bar-animated" style="width: '+percentage+'%">'+ percentage+'%</div></div>'
+      $(".progress_content").html(tmp);
+
+      // Carousel function
+      let myCarousel = document.querySelectorAll('#featureContainer .carousel .carousel-item');
+      myCarousel.forEach((el) => {
+        const minPerSlide = 4
+        let next = el.nextElementSibling
+        for (var i = 1; i < minPerSlide; i++) {
+          if (! next) { // wrap carousel by using first child
+            next = myCarousel[0]
+          }
+          let cloneChild = next.cloneNode(true)
+          el.appendChild(cloneChild.children[0])
+          next = next.nextElementSibling
+        }
+      })
+    }
+    $(".box_view_cart_btn").click(() => {
+      window.location.href = '/cart';
+    })
+    function roundToOneDecimalPlace(number) {
+      return Math.round(number * 10) / 10;
+    }
+    $(".btn-close").click(() => {
+      $("#liveToast").hide(1000);
+      $("#toastSuccess").hide(1000);
+    })
+    $(".box_detail_btn").click(() => {
+      $(".first_box").hide();
+      $(".second_box").show();
+    })
+    $("#box_name_btn").click(() => {
+        console.log("button click")
+        if($(".box_item").val())
+        {
+          $("#toastSuccess").show(500);
+          // Add products to cart
+          console.log("fetch cart/add.js")
+          fetch('/cart/add.js', {
+            method: "post",
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({
+              items: productGroup
+            })
+          })
+          .then((res) => {
+            $(".second_box").hide();
+            $(".third_box").show();
+            $("#liveToast").hide(1000);
+            
+            // Add box to the box group
+            let boxGroup = JSON.parse(localStorage.getItem("boxGroup") || "[]");
+            let box = {
+              id: boxGroup.length == 0 ? boxGroup.length : (boxGroup[boxGroup.length-1].id) + 1,
+              name: $(".box_item").val(),
+              items: productGroup,
+              products: bundleGroup,
+              price: price,
+              quantity: 1
+            }
+            boxGroup.push(box)
+            localStorage.setItem("boxGroup", JSON.stringify(boxGroup))
+            console.log("boxGroup", boxGroup)
+
+            // Clean bundleGroup, productGroup
+            localStorage.setItem("bundleGroup", "[]")
+            localStorage.setItem("productGroup", "[]")
+            // localStorage.setItem("boxGroup", "[]")
+
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+        }
+        else {
+          $("#liveToast").show(500);
+        }
+      })
+})
+  
+</script>

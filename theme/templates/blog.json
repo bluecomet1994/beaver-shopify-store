@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "a5acdd9d-f4cb-4e1c-a1de-868c1ed29272": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "title": "Beaver Magazine",
+        "blogs_per_page": 12
+      }
+    },
+    "3f6118e4-8c3e-477f-ad13-5446d10ebcdc": {
+      "type": "beaver-out-main",
+      "settings": {
+        "number_of_products": 5,
+        "collection": "create-your-box"
+      }
+    }
+  },
+  "order": [
+    "a5acdd9d-f4cb-4e1c-a1de-868c1ed29272",
+    "main",
+    "3f6118e4-8c3e-477f-ad13-5446d10ebcdc"
+  ]
+}

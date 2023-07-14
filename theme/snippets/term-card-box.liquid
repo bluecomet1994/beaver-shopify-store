@@ -1,0 +1,66 @@
+<div class="term-card my-4">
+  <div class="container px-0">
+    <div class="color-{{ bg-value }} team-card-main text-black">
+      <div class="term-card-content row align-items-center px-5 ">
+        <div class="col-12 col-md-7">
+          <h1 style="color: black">Build your Custom Box</h1>
+        </div>
+        <div class="col-12 col-md-5">
+          <p>Choose from 480 different treats from all over the world</p>
+          <a href="#" class="button button--primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+  .term-card-content {
+    height: 150px;
+  }
+  .CustomBox {
+    background: var(--StrongFiller);
+    text-align: center;
+  }
+  .custom-img {
+    width: 100%;
+  }
+  .term-card-content {
+    background: url(' https://cdn.shopify.com/s/files/1/0733/7354/8818/files/Term_Card_Background.svg?v=1685987404') no-repeat 100% 100%;
+    background-position: inherit;
+  }
+  .term-card-main {
+    max-width: 1180px;
+  }
+  .term-card h1 {
+    font-family: Tiempos Headline;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+
+  .term-card p {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  @media screen and (max-width: 749px) {
+    .term-card-content {
+      height: 100% !important;
+      padding: 25px;
+    }
+    .term-card h1 {
+      font-family: Tiempos Headline;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 31px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  }
+{%- endstyle -%}

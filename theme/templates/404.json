@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "bc8f5bac-3f36-4467-87a8-128fd4a69c1b": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "title": "404 Error",
+        "subtitle_1": "PAGE NOT FOUND OR MISSING",
+        "subtitle_2": "THERE WAS A BEAVER ATTACK ON OUR CHOCOLATES!",
+        "desc": "<p>We lost the page you were looking for in the process and we're doing our best to recover it. If the problem persists, feel free to get in touch with us and we'll happily help you.<\/p>",
+        "image": "shopify:\/\/shop_images\/Main_Image.png"
+      }
+    }
+  },
+  "order": [
+    "bc8f5bac-3f36-4467-87a8-128fd4a69c1b",
+    "main"
+  ]
+}

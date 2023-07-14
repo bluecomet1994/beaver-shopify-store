@@ -1,0 +1,120 @@
+<div class="account-nav">
+  <h2>My Account</h2>
+  <div class="half-border-bottom mb-4 d-flex"></div>
+  <nav class="nav nav-pills flex-column">
+    <a
+      class="nav-link nav-item active"
+      data-bs-toggle="pill"
+      data-bs-target="#nav-dashboard">Dashboard</a>
+    <a
+      class="nav-link nav-item"
+      data-bs-toggle="pill"
+      data-bs-target="#nav-details">Account Details</a>
+    <a
+      class="nav-link nav-item"
+      data-bs-toggle="pill"
+      data-bs-target="#nav-orders">Orders</a>
+    <a
+      class="nav-link nav-item"
+      data-bs-toggle="pill"
+      data-bs-target="#nav-newsletter">Newsletter</a>
+    <a
+      class="nav-link nav-item-discount d-flex align-items-center"
+      data-bs-toggle="pill"
+      data-bs-target="#nav-profile">{%- render 'icon-fire' -%} &nbsp;Get $10 Discount</a>
+    <a
+      class="nav-link nav-item-1"
+      data-bs-toggle="pill"
+      data-bs-target="#nav-profile">{%- render 'icon-disable' -%} &nbsp;Logout</a>
+    <a class="nav-link nav-item-2" href="#">Need help?</a>
+    <a class="nav-link nav-item-2" href="#">Where's my Order?</a>
+    <a
+      class="nav-link nav-item-2"
+      href="/pages/frequently-asked-questions">FAQ</a>
+    <a class="nav-link nav-item-2" href="#">Browse our Store</a>
+  </nav>
+</div>
+
+{%- style -%}
+  .nav .active {
+    padding: 15px;
+    background-color: #FA285A !important;
+    color: #fff !important;
+  }
+  .account-nav a {
+    padding-left: 0;
+  }
+  .account-nav {
+    border: 2px solid #191919;
+    padding: 25px;
+  }
+  .account-nav h2 {
+    font-family: Tiempos Headline;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #000216;
+  }
+  .nav-item {
+    cursor: pointer !important;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919 !important;
+    border-bottom: 1px solid #F2F0FF;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .half-border-bottom {
+    width: 48px;
+    height: 6px;
+    background-color: #E6C8EB;
+  }
+  .nav-item-discount {
+    cursor: pointer !important;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #FA285A;
+    border-bottom: 1px solid #F2F0FF;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .nav-item-discount:hover {
+    color: #FA285A;
+  }
+  .nav-item-1 {
+    cursor: pointer !important;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #58565C;
+    border-bottom: 2px solid #191919;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .nav-item-2 {
+    cursor: pointer !important;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #58565C;
+    border-bottom: 1px solid #F2F0FF;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+{%- endstyle -%}

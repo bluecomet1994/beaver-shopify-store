@@ -1,0 +1,64 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "image": "shopify:\/\/shop_images\/image-banner-Illustration.png",
+        "title": "Beaver's Favourite Boxes",
+        "description": "Browse some of the boxes we've carefully put together, with premium products, for the true chocolate lovers out there!",
+        "active": 1,
+        "color_scheme": "inverse"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": false,
+        "filter_type": "vertical",
+        "enable_sorting": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ea11e1ec-487d-4624-9422-0041f756486e": {
+      "type": "products-all",
+      "settings": {
+        "collection": "create-your-box",
+        "products_per_page": 32,
+        "products_per_row": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": false
+      }
+    },
+    "6acaa238-5823-4e93-9d43-024a0c2120b2": {
+      "type": "term-card",
+      "settings": {
+        "section_title": "Build your Custom Box",
+        "text_1": "<p>Not sure what to pick?<\/p>",
+        "text_2": "<p>Choose from 480 different treats from all over the world<\/p>",
+        "image": "shopify:\/\/shop_images\/Term_Card_Background.svg",
+        "color_scheme": "accent-1"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "ea11e1ec-487d-4624-9422-0041f756486e",
+    "6acaa238-5823-4e93-9d43-024a0c2120b2"
+  ]
+}

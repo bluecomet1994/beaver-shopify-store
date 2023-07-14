@@ -1,0 +1,79 @@
+{
+  "sections": {
+    "77eb2d24-afca-458a-b39a-530872f5359e": {
+      "type": "main-cart-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "image": "shopify:\/\/shop_images\/page-banner.svg",
+        "title": "Cart",
+        "description": "We're ready to prepare the product and ship them to you, follow the checkout process and the treats will be with you in no time!",
+        "active": 1,
+        "color_scheme": "inverse"
+      }
+    },
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+      }
+    },
+    "ae48e402-229c-4b86-8e15-d358dd20c356": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Other Products you might like",
+        "product_counts": 4,
+        "heading_position": "left",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "create-your-box",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "accent-2",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "77eb2d24-afca-458a-b39a-530872f5359e",
+    "cart-items",
+    "cart-footer",
+    "ae48e402-229c-4b86-8e15-d358dd20c356"
+  ]
+}

@@ -1,0 +1,41 @@
+.image-banner-title {
+  font-family: Tiempos Headline;
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 101px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #191919;
+}
+.image-banner-desc {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #313033;
+}
+.image-banner-btn {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  color: #191919;
+}
+.image-banner-logo {
+  width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .image-banner-title {
+    font-family: Tiempos Headline;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+}

@@ -1,0 +1,129 @@
+:root {
+
+  --MainContent: #191919;
+  --PrimaryColor: #FA285A;
+  --SecondaryColor: #FF6400;
+  --AccentColor: #FAC832;
+  --StrongFiller: #E6C8EB;
+  --LightFiller: #F9EBFB;
+  --ContentSoft: #58565C;
+  --ContentMedium: #313033;
+  --AccentPro: #02BE86;
+  --SmokeWhite: #fff;
+}
+
+
+
+
+
+
+.WhiteBG {
+  background: #fff;
+}
+
+
+.BrandButtons {
+    display: flex;
+    gap: 20px;
+}
+.button.button--primary {
+  background: #fff;
+  color: #000;
+  box-shadow: 5px 5px var(--PrimaryColor);
+}
+.button button--primary:before , .button button--primary:after {
+    display: none !important;
+}
+a.ThreeD--button , a.button.button--primary {
+    color: #000;
+    font-weight: bold;
+    border: 2px solid;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    padding: 12px 30px;
+    display:block;
+    width: fit-content;
+    transition: 0.3s all !important;
+}
+.ThreeD--button:hover , .button.button--primary:hover {
+    box-shadow: 5px 5px #000 !important;
+    color: #fff;
+    background: var(--PrimaryColor);
+}
+a.ThreeD--button.OrangeShadow {
+    box-shadow: 5px 5px var(--AccentColor);
+}
+a.ThreeD--button.OrangeShadow:hover {
+    box-shadow: 5px 5px #000 !important;
+    color: #fff;
+    background: var(--AccentColor);
+}
+.ThreeD--button.PinkShadow {
+    box-shadow: 5px 5px var(--PrimaryColor);
+}
+a.ThreeD--button.PinkShadow:hover {
+    box-shadow: 5px 5px #000 !important;
+    color: #fff;
+    background: var(--PrimaryColor);
+}
+a.ThreeD--button.BlackShadow {
+  box-shadow: 5px 5px #000;
+}
+a.ThreeD--button.BlackShadow:hover {
+    box-shadow: 5px 5px #000 !important;
+    color: #fff;
+    background: #000;
+}
+a.ThreeD--button.OrangeShadow.WhiteBG:hover {
+    color: #000;
+    background: var(--AccentColor) !important;
+}
+
+
+
+
+
+
+a.TwoD--button {
+    color: #000;
+    font-weight: 700;
+    border: 2px solid;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    padding: 12px 30px;
+    display: block;
+    width: fit-content;
+    transition: .3s all!important;
+}
+a.TwoD--button.PinkBTN {
+  background: var(--PrimaryColor);
+  color: #fff;
+  border-color: #000;
+}
+a.TwoD--button.WhiteBTN {
+  background: var(--SmokeWhite);
+}
+a.TwoD--button.PurpleBTN {
+    background: var(--StrongFiller);
+}
+
+
+
+
+.custom--button {
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 3px solid;
+  background: #fff;
+  padding: 12px 30px;
+  transition: 0.3s all !important;
+  text-decoration: none !important;
+}
+.custom--button.OrangeShadow {
+  box-shadow: 5px 5px #FAC832;
+}
+.custom--button:hover {
+  box-shadow: 0px 0px transparent;
+  border: 3px solid #000 !important;
+}

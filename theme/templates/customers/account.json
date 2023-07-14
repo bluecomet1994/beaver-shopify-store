@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "e5651d41-ded2-49c4-b227-61e132d2ad19": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-account",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "collection": "create-your-box"
+      }
+    }
+  },
+  "order": [
+    "e5651d41-ded2-49c4-b227-61e132d2ad19",
+    "main"
+  ]
+}

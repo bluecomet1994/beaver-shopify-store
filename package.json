@@ -1,0 +1,15 @@
+{
+  "name": "beavertreats",
+  "version": "1.0.0",
+  "scripts": {
+    "theme": "shopify theme dev",
+    "theme:dev": "env-cmd -r shopify.presets.json -e development shopify theme dev",
+    "download": "env-cmd -r shopify.presets.json -e development shopify theme pull",
+    "download:prod": "env-cmd -r shopify.presets.json -e production shopify theme pull",
+    "deploy": "env-cmd -r shopify.presets.json -e development shopify theme push",
+    "deploy:prod": "env-cmd -r shopify.presets.json -e production shopify theme push"
+  },
+  "dependencies": {
+    "env-cmd": "10.1.0"
+  }
+}

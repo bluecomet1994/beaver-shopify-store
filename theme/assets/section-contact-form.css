@@ -1,0 +1,105 @@
+.contact-info-form {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.contact-detail-form {
+  padding: 60px;
+  background-color: #191919;
+  color: white;
+}
+.contact-title {
+  font-family: Tiempos Headline;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 65px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+.contact-details {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+.contact-address {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+.contact-item {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+.contact-input-form{
+  padding: 60px;
+}
+.contact-input-item {
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-color: #191919;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contact-input-title {
+  font-family: Tiempos Headline;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 65px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contact-input-topic {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contact-input-detail {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contact-looking-for, .contact-looking-for a{
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #191919;
+}
+
+@media screen and (max-width: 749px) {
+  .contact-info-form {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .contact-input-form{
+    padding: 5px;
+  }
+  .contact-detail-form {
+    padding: 35px;
+  }
+}

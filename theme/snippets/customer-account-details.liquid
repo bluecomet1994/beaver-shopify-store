@@ -1,0 +1,150 @@
+<div class="account-details" id="account-details">
+  <h2 class="account-dashboard-title py-4">Account Details</h2>
+  <p class="account-details-topic-1 py-2">EDIT YOUR ACCOUNT DETAILS</p>
+  <p class="account-dashboard-desc pt-2 pb-5">Logged in as
+    <span>beaveradmin@company.com</span>
+  </p>
+  <div
+    class="account-dashboard-image pb-3 small-show">
+    <img
+      class="account-mobile-logo"
+      src="https://cdn.shopify.com/s/files/1/0733/7354/8818/files/Image_430x.svg?v=1686084946"
+      alt="">
+  </div>
+  <input
+    class="account-details-item w-100 my-4"
+    type="text"
+    placeholder="Beaver First Name">
+  <input
+    class="account-details-item w-100 my-4"
+    type="text"
+    placeholder="Admin Last Name">
+  <input
+    class="account-details-item w-100 my-4"
+    type="email"
+    placeholder="beaveradmin@company.com">
+  <h3 class="account-details-sub-title py-4">Change Password</h3>
+  <input
+    class="account-details-item w-100 my-4"
+    type="password"
+    placeholder="Password">
+  <p class="account-details-topic-1 py-2">NEW PASSWORD</p>
+  <input
+    class="account-details-item w-100 my-4"
+    type="password"
+    placeholder="New Password">
+  <input
+    class="account-details-item w-100 my-4"
+    type="password"
+    placeholder="Confirm New Password">
+  <button class="account-details-save-btn button button--primary my-4">SAVE NEW PASSWORD</button>
+</div>
+<hr class="customer-account-hr" />
+<div class="account-address">
+  <div class="d-flex justify-content-between align-items-center py-4">
+    <h2 class="account-details-title">Saved Addresses</h2>
+    <button class="account-address-btn">ADD New +</button>
+  </div>
+  <div class="account-address-card">
+    <div class="account-address-card-header d-flex align-items-center justify-content-between">
+      <p class="account-details-topic-1 py-3">ADDRESS 1 &nbsp;<span>(DEFAULT)</span>
+      </p>
+      <div>
+        <button class="account-address-btn">EDIT</button>
+        <button class="account-address-btn">DELETE</button>
+      </div>
+    </div>
+    <div class="account-address-card-content py-3">
+      <p class="account-details-topic-2">Beaver Aaran</p>
+      <p class="account-address-topic-1">206 Seneca Drive, Cleveland, Ohio</p>
+      <p class="account-address-topic-1">44197</p>
+      <p class="account-address-topic-1">(+1) 503-892-5397</p>
+      <p class="account-address-topic-1">United States</p>
+    </div>
+  </div>
+</div>
+{% style %}
+  .account-details-title {
+    font-family: Tiempos Headline;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  .account-details-topic-1 {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  .account-details-topic-2 {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #58565c;
+  }
+  .account-details-item {
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: #191919;
+    height: 48px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+  }
+  .account-details-sub-title {
+    font-family: Tiempos Headline;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  .account-details-save-btn {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  .account-address-topic-1 {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  .account-address-btn {
+    background-color: #fff;
+    color: #191919;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0;
+    padding: 3px 20px;
+  }
+  .account-address-card-header,
+  .account-address-card-content {
+    border-bottom: 2px solid #58565C33;
+  }
+  .account-address-card-header span,
+  .account-details-topic-2 span {
+    color: #FA285A;
+  }
+{% endstyle %}

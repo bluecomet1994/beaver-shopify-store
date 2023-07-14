@@ -1,0 +1,211 @@
+{
+  "sections": {
+    "eb97ebf7-5d08-4800-a215-1837178a268c": {
+      "type": "image-banner",
+      "settings": {
+        "title": "<p>Exotic Snacks from Around <br\/>the World<\/p>",
+        "description": "<p>Lorem ipsum dolor sit amet consectetur. Dapibus tincidunt convallis semper ullamcorper. Pharetra convallis nibh netus sed hac.<\/p>",
+        "image": "shopify:\/\/shop_images\/Group_4_bc709406-1f82-487f-8564-83d8376567d1.png",
+        "mobile_image": "shopify:\/\/shop_images\/Image_c74cc83b-96f2-4ccd-8988-60cde6283c0c.jpg"
+      }
+    },
+    "665e54a2-5e9f-4f2a-9563-6bbf664d7fb6": {
+      "type": "PromoBlock",
+      "blocks": {
+        "template--18617704448289__665e54a2-5e9f-4f2a-9563-6bbf664d7fb6-16815876919ddd872c-0": {
+          "type": "feature",
+          "settings": {
+            "Title": "Made with Love",
+            "Desc": "<p>Treats created for you to enjoy & cheerish<\/p>",
+            "IconLink": "https:\/\/cdn.shopify.com\/s\/files\/1\/0744\/5479\/4529\/files\/Love.svg"
+          }
+        },
+        "template--18617704448289__665e54a2-5e9f-4f2a-9563-6bbf664d7fb6-16815876919ddd872c-1": {
+          "type": "feature",
+          "settings": {
+            "Title": "Quality not Quantity",
+            "Desc": "<p>We carefully pick the best ingredients<\/p>",
+            "IconLink": "https:\/\/cdn.shopify.com\/s\/files\/1\/0744\/5479\/4529\/files\/Quantity.svg?v=1681636428"
+          }
+        },
+        "template--18617704448289__665e54a2-5e9f-4f2a-9563-6bbf664d7fb6-16815876919ddd872c-2": {
+          "type": "feature",
+          "settings": {
+            "Title": "Blazing Fast Delivery",
+            "Desc": "<p>We deliver the treats in 24-48h in US<\/p>",
+            "IconLink": "https:\/\/cdn.shopify.com\/s\/files\/1\/0744\/5479\/4529\/files\/Blazing.svg?v=1681636428"
+          }
+        },
+        "template--18617704448289__665e54a2-5e9f-4f2a-9563-6bbf664d7fb6-16815876919ddd872c-3": {
+          "type": "feature",
+          "settings": {
+            "Title": "Support that Cares",
+            "Desc": "<p>Have an issue? We'll happily help<\/p>",
+            "IconLink": "https:\/\/cdn.shopify.com\/s\/files\/1\/0744\/5479\/4529\/files\/Support.svg?v=1681636428"
+          }
+        }
+      },
+      "block_order": [
+        "template--18617704448289__665e54a2-5e9f-4f2a-9563-6bbf664d7fb6-16815876919ddd872c-0",
+        "template--18617704448289__665e54a2-5e9f-4f2a-9563-6bbf664d7fb6-16815876919ddd872c-1",
+        "template--18617704448289__665e54a2-5e9f-4f2a-9563-6bbf664d7fb6-16815876919ddd872c-2",
+        "template--18617704448289__665e54a2-5e9f-4f2a-9563-6bbf664d7fb6-16815876919ddd872c-3"
+      ],
+      "settings": {
+        "Heading": "Grab Your Starter Box",
+        "text": "<p>Interested in testing the flavors? Grab a Starter Box including all of our flavours to see which one fits your style and taste!<\/p>"
+      }
+    },
+    "a122c191-4a78-4ddb-968d-344e92fe4132": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Beaver's Favourites",
+        "product_counts": 8,
+        "heading_position": "left",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "237a4475-c0e9-4821-9ee2-1713e90278be": {
+      "type": "BuildUrBox",
+      "settings": {
+        "section_title": "Build your Custom Box",
+        "text": "<p>Lorem ipsum dolor sit amet consectetur. Dapibus tincidunt convallis semper ullamcorper. Pharetra convallis nibh netus sed hac.<\/p>",
+        "image": "shopify:\/\/shop_images\/Custom-Box.svg"
+      }
+    },
+    "6167b2ce-3282-4c47-91a1-c137f8132716": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New in the Lodge",
+        "product_counts": 4,
+        "heading_position": "center",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "accent-2",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "bfb8387e-168e-4065-8780-a2e825919f04": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18617704448289__bfb8387e-168e-4065-8780-a2e825919f04-1681484561298775ca-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Beaver's Magazine<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18617704448289__bfb8387e-168e-4065-8780-a2e825919f04-1681484561298775ca-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet consectetur. Dapibus tincidunt convallis semper ullamcorper. Pharetra convallis nibh netus sed hac.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18617704448289__bfb8387e-168e-4065-8780-a2e825919f04-1681484561298775ca-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "BROWSE ARTICLES",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18617704448289__bfb8387e-168e-4065-8780-a2e825919f04-1681484561298775ca-0",
+        "template--18617704448289__bfb8387e-168e-4065-8780-a2e825919f04-1681484561298775ca-1",
+        "template--18617704448289__bfb8387e-168e-4065-8780-a2e825919f04-1681484561298775ca-2"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "image_1": "shopify:\/\/shop_images\/slider_image_1.svg",
+        "title_1": "Everything You Don’t Know About Chocolate",
+        "description_1": "18 hours ago by BeaverAdmin",
+        "image_2": "shopify:\/\/shop_images\/Image_Outer_430x_33fd835d-331b-4748-bf50-fac060bbf9dd.webp",
+        "title_2": "Everything You Don’t Know About Chocolate",
+        "description_2": "18 hours ago by BeaverAdmin",
+        "image_3": "shopify:\/\/shop_images\/RedImage_430x_ecdf5b36-321f-4588-8a34-c020471ac7bd.webp",
+        "title_3": "Everything You Don’t Know About Chocolate",
+        "description_3": "18 hours ago by BeaverAdmin"
+      }
+    },
+    "d0981f63-a84e-4e16-be30-9557b81f2f84": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18617704448289__d0981f63-a84e-4e16-be30-9557b81f2f84-16814841847774fa1f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Who let the Beavers out?<\/strong>",
+            "heading_size": "h0"
+          }
+        },
+        "template--18617704448289__d0981f63-a84e-4e16-be30-9557b81f2f84-16814841847774fa1f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Follow us on instagram for exclusive promotion and product launches along with cool news and tasty images for you to enjoy on your instagram feed <strong>@beavertreats<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18617704448289__d0981f63-a84e-4e16-be30-9557b81f2f84-16814841847774fa1f-0",
+        "template--18617704448289__d0981f63-a84e-4e16-be30-9557b81f2f84-16814841847774fa1f-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "collection": "frontpage"
+      }
+    }
+  },
+  "order": [
+    "eb97ebf7-5d08-4800-a215-1837178a268c",
+    "665e54a2-5e9f-4f2a-9563-6bbf664d7fb6",
+    "a122c191-4a78-4ddb-968d-344e92fe4132",
+    "237a4475-c0e9-4821-9ee2-1713e90278be",
+    "6167b2ce-3282-4c47-91a1-c137f8132716",
+    "bfb8387e-168e-4065-8780-a2e825919f04",
+    "d0981f63-a84e-4e16-be30-9557b81f2f84"
+  ]
+}

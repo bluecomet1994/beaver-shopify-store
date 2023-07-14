@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "f6ba1363-af10-4fad-b43d-cff6cf263ed6": {
+      "type": "main-breadcrumb",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "contact_title": "Get in Touch",
+        "contact_address": "<p>Marion County 4002<br\/>Yellville, Arkansas(AR), 72687<\/p>",
+        "contact_email": "contact@beavertreats.com",
+        "contact_phone": "(870) 449-6267",
+        "image": "shopify:\/\/shop_images\/contact_background.png",
+        "contact_input_title": "Send us a Message",
+        "contact_input_detail": "<p>We do our best to respond to all the messages withing 24-48h, we appreciate your patience and interest!<\/p>"
+      }
+    },
+    "109b829b-989a-4e49-87b4-0bd3291d7164": {
+      "type": "beaver-out-main",
+      "settings": {
+        "number_of_products": 5,
+        "collection": "create-your-box"
+      }
+    }
+  },
+  "order": [
+    "f6ba1363-af10-4fad-b43d-cff6cf263ed6",
+    "main",
+    "form",
+    "109b829b-989a-4e49-87b4-0bd3291d7164"
+  ]
+}

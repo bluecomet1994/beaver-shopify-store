@@ -1,0 +1,26 @@
+<div class="account-feed">
+  <h2 class="account-feed-title">From our Feed</h2>
+  <p class="py-4">{%- render 'icon-instagram' -%}&nbsp;@Beavertreats</p>
+  <div class="row gx-4 gy-4">
+    {%- for product in card-products limit: 4 -%}
+      <div class="col-6">
+        <img
+          src={{ product.featured_media | image_url }}
+          alt="beaver out image"
+          class="beaver-out-image w-100" />
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% style %}
+  .account-feed-title {
+    font-family: Tiempos Headline;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+{% endstyle %}
