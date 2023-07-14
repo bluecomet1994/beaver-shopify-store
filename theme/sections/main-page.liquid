@@ -1,0 +1,200 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% if page.title == 'Branding' -%}
+  <style>
+    .ColorsGrid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .Color {
+        height: 100px;
+        background: rgba(0,0,0,0.1);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ColorsGrid .Color:nth-child(1) {
+        background: var(--MainContent);
+        color: #fff;
+    }
+    .ColorsGrid .Color:nth-child(2) {
+      background: var(--PrimaryColor);
+      color: #fff;
+    }
+    .ColorsGrid .Color:nth-child(3) {
+        background: var(--SecondaryColor);
+        color: #fff;
+    }
+    .ColorsGrid .Color:nth-child(4) {
+      background: var(--AccentColor);
+      color: #fff;
+    }
+    .ColorsGrid .Color:nth-child(5) {
+      background: var(--StrongFiller);
+      color: #fff;
+    }
+    .ColorsGrid .Color:nth-child(6) {
+        background: var(--LightFiller);
+    }
+    .ColorsGrid .Color:nth-child(7) {
+      background: var(--ContentSoft);
+      color: #fff;
+    }
+    .ColorsGrid .Color:nth-child(8) {
+        background: var(--ContentMedium);
+        color: #fff;
+    }
+    .ColorsGrid .Color:nth-child(9) {
+      background: var(--AccentPro);
+      color: #fff;
+    }
+    .ColorsGrid .Color:nth-child(10) {
+        background: var(--SmokeWhite);
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+  </style>
+
+  <div class="BeaverBranding page-width">
+    <div class="BrandDetails"></div>
+    <div class="BrandIMGs"></div>
+
+    <div class="BrandColors">
+      <div class="ColorsGrid">
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--MainContent - #191919</div>
+        </div>
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--PrimaryColor - #FA285A</div>
+        </div>
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--SecondaryColor - #FF6400</div>
+        </div>
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--AccentColor - #FAC832</div>
+        </div>
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--StrongFiller - #E6C8EB</div>
+        </div>
+
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--LightFiller - #F9EBFB</div>
+        </div>
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--ContentSoft - #58565C</div>
+        </div>
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--ContentMedium - #313033</div>
+        </div>
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--AccentPro - #02BE86</div>
+        </div>
+        <div class="Color">
+          <div class="ColorBlock"></div>
+          <div class="ColorName">--SmokeWhite - #fff</div>
+        </div>
+      </div>
+    </div>
+    <div class="BrandTypo">
+      <h1>This is a test message, MrVibe looks really hot!</h1>
+      <h2>This is a test message, MrVibe looks really hot!</h2>
+      <h3>This is a test message, MrVibe looks really hot!</h3>
+      <h4>This is a test message, MrVibe looks really hot!</h4>
+      <h5>This is a test message, MrVibe looks really hot!</h5>
+      <h6>This is a test message, MrVibe looks really hot!</h6>
+
+      <p>This is a test message, MrVibe looks really hot!</p>
+    </div>
+
+    <br>
+    <br>
+    <h2>3D Buttons</h2>
+    <div class="BrandButtons">
+      <a class="ThreeD--button OrangeShadow" href="#">Details</a>
+      <a class="ThreeD--button PinkShadow" href="#">Details</a>
+      <a class="ThreeD--button BlackShadow" href="#">Details</a>
+    </div>
+
+    <h2>2D Buttons</h2>
+    <div class="BrandButtons">
+      <a class="TwoD--button PinkBTN" href="#">Add to Cart</a>
+      <a class="TwoD--button WhiteBTN" href="#">Add to Cart</a>
+      <a class="TwoD--button PurpleBTN" href="#">Add to Cart</a>
+    </div>
+    <div class="BrandCards"></div>
+  </div>
+
+{% else -%}
+  {{ page.title | escape }}
+
+  <div class="page-width page-width--narrow section-{{ section.id }}-padding">
+    <h1 class="main-page-title page-title h0">
+      {{ page.title | escape }}
+    </h1>
+    <div class="rte">
+      {{ page.content }}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

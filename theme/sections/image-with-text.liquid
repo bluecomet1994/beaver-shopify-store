@@ -1,0 +1,296 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .image-with-text {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .image-with-text-title {
+    /* Beaver's Magazine */
+
+    /* H1 - 54pt Bold */
+    font-family: 'Tiempos Headline';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 65px;
+    /* identical to box height */
+
+    /* Main Content */
+    color: #191919;
+  }
+  .image-with-text .description {
+    /* Content Main - 16pt Regular */
+    margin-top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: #313033;
+  }
+  .image-with-text .button {
+    margin-top: 40px;
+  }
+  #carouselSnackImages {
+    width: 680px;
+    height: 400px;
+  }
+  .slider_title {
+    font-family: Tiempos Headline;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .slider_description {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  @media screen and (max-width: 680px) {
+    #carouselSnackImages {
+      width: 100%;
+      height: 250px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="image-with-text container">
+  <div class="row align-items-center gy-4">
+    <div class="col-12 col-sm-6">
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+          {%- when 'heading' -%}
+          <h2 class="image-with-text-title">{{ block.settings.heading }}</h2>
+          {%- when 'text' -%}
+          <h3 class="description">{{ block.settings.text }}</h3>
+          {%- when 'button' -%}
+          {%- if block.settings.button_label != blank -%}
+            <a
+              {% if block.settings.button_link == blank %}
+              role="link"
+              aria-disabled="true"
+              {% else %}
+              href="{{ block.settings.button_link }}"
+              {% endif %}
+              class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+              {{ block.shopify_attributes }}>
+              {{ block.settings.button_label | escape }}
+            </a>
+          {%- endif -%}
+        {% endcase %}
+      {%- endfor -%}
+    </div>
+    <div class="col-12 col-sm-6">
+      <div id="carouselSnackImages" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselSnackImages"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselSnackImages"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselSnackImages"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src={{ section.settings.image_1 | image_url }}
+              class="d-block w-100"
+              alt={{ section.settings.image_1 }}>
+            <h1 class="slider_title">{{ section.settings.title_1 }}</h1>
+            <h2 class="slider_description">{{ section.settings.description_1 }}</h2>
+          </div>
+          <div class="carousel-item">
+            <img
+              src={{ section.settings.image_2 | image_url }}
+              class="d-block w-100"
+              alt={{ section.settings.image_2 }}>
+            <h1 class="slider_title">{{ section.settings.title_2 }}</h1>
+            <h2 class="slider_description">{{ section.settings.description_2 }}</h2>
+          </div>
+          <div class="carousel-item">
+            <img
+              src={{ section.settings.image_3 | image_url }}
+              class="d-block w-100"
+              alt={{ section.settings.image_3 }}>
+            <h1 class="slider_title">{{ section.settings.title_3 }}</h1>
+            <h2 class="slider_description">{{ section.settings.description_3 }}</h2>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselSnackImages"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselSnackImages"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.image-with-text.name",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "t:sections.image-with-text.settings.image.label"
+      },
+      {
+        "type": "text",
+        "id": "title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "textarea",
+        "id": "description_1",
+        "label": "Description 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "t:sections.image-with-text.settings.image.label"
+      }, {
+        "type": "text",
+        "id": "title_2",
+        "label": "Title 2"
+      }, {
+        "type": "textarea",
+        "id": "description_2",
+        "label": "Description 2"
+      }, {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "t:sections.image-with-text.settings.image.label"
+      }, {
+        "type": "text",
+        "id": "title_3",
+        "label": "Title 3"
+      }, {
+        "type": "textarea",
+        "id": "description_3",
+        "label": "Description 3"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "t:sections.image-with-text.blocks.heading.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "default": "Image with text",
+            "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+          }, {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+              {
+                "value": "h2",
+                "label": "t:sections.all.heading_size.options__1.label"
+              }, {
+                "value": "h1",
+                "label": "t:sections.all.heading_size.options__2.label"
+              }, {
+                "value": "h0",
+                "label": "t:sections.all.heading_size.options__3.label"
+              }
+            ],
+            "default": "h1",
+            "label": "t:sections.all.heading_size.label"
+          }
+        ]
+      }, {
+        "type": "text",
+        "name": "t:sections.image-with-text.blocks.text.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+          }, {
+            "type": "select",
+            "id": "text_style",
+            "options": [
+              {
+                "value": "body",
+                "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__1.label"
+              }, {
+                "value": "subtitle",
+                "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__2.label"
+              }
+            ],
+            "default": "body",
+            "label": "t:sections.image-with-text.blocks.text.settings.text_style.label"
+          }
+        ]
+      }, {
+        "type": "button",
+        "name": "t:sections.image-with-text.blocks.button.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_label",
+            "default": "Button label",
+            "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+            "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.image-with-text.presets.name",
+        "blocks": [
+          {
+            "type": "heading"
+          }, {
+            "type": "text"
+          }, {
+            "type": "button"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

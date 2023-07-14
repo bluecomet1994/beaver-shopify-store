@@ -1,0 +1,119 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}
+    px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}
+    px;
+  }
+  .main-blog-title {
+    font-family: Tiempos Headline;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0;
+    text-align: left;
+    padding-bottom: 35px;
+  }
+  @media screen and (max-width: 749px) {
+    .main-blog-title {
+      font-family: Tiempos Headline;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 50px;
+      letter-spacing: 0;
+      text-align: left;
+      padding-bottom: 0;
+    }
+  }
+  .blog-category {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #58565C;
+    padding-left: 0;
+  }
+  .blog-category-header {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}
+      px;
+      padding-bottom: {{ section.settings.padding_bottom }}
+      px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="container blog-news">
+  <div class="row mt-5">
+    <div class="col-sm-3 category small-hide">
+      <p class="blog-category-header">Category</p>
+      <nav class="nav flex-column">
+        <a class="nav-link blog-category" href="#">Chocolate Delights</a>
+        <a class="nav-link blog-category" href="#">Facts & Curiosities</a>
+        <a class="nav-link blog-category" href="#">Health</a>
+        <a class="nav-link blog-category" href="#">Around the World</a>
+        <a class="nav-link blog-category" href="#">Product</a>
+        <a class="nav-link blog-category" href="#">Education</a>
+        <a class="nav-link blog-category" href="#">Company</a>
+        <a class="nav-link blog-category" href="#">Beaver Charity</a>
+        <a class="nav-link blog-category" href="#">Worldwide Tastes</a>
+      </nav>
+    </div>
+    <div class="col-12 col-sm-9 blog-lists">
+      <h1 class="main-blog-title">{{ section.settings.title }}</h1>
+      {%- paginate blog.articles by section.settings.blogs_per_page -%}
+        <div class="row gx-4 gy-6">
+          {%- for article in blog.articles -%}
+            <div class="blog-article col-12 col-sm-4">
+              {%- render 'article-card', article: article -%}
+            </div>
+          {%- endfor -%}
+        </div>
+        {%- if paginate.pages > 1 -%}
+          {%- render 'pagination', paginate: paginate -%}
+        {%- endif -%}
+      {%- endpaginate -%}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "t:sections.main-blog.name",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Beaver Magazine"
+      }, {
+        "type": "range",
+        "id": "blogs_per_page",
+        "label": "Blogs per Page",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "default": 9
+      }
+    ]
+  }
+{% endschema %}

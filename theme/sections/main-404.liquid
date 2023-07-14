@@ -1,0 +1,89 @@
+<style type="text/css">
+  .template-404-title {
+    font-family: Tiempos Headline;
+    font-size: 84px;
+    font-weight: 700;
+    line-height: 101px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+  .template-404-sub-title {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191919;
+  }
+  .template-404-desc {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #191919;
+    max-width: 580px;
+    margin: auto;
+  }
+  .template-404-logo {
+    max-width: 980px;
+  }
+  @media screen and (min-width: 750px) {
+    
+  }
+</style>
+
+<div class="container template-404 center my-4">
+  <p class="template-404-title text-center py-2">
+    {{ section.settings.title }}
+  </p>
+  <p class="template-404-sub-title text-center py-2">
+    {{ section.settings.subtitle_1 }}
+  </p>
+  <img class="w-100 template-404-logo py-4" src={{ section.settings.image | image_url }}>
+  <p class="template-404-sub-title text-center">
+    {{ section.settings.subtitle_2 }}
+  </p>
+  <p class="template-404-desc text-center py-2">
+    {{ section.settings.desc }}
+  </p>
+  <a href="{{ routes.all_products_collection_url }}" class="button button--primary mx-auto my-4">
+    {{ 'general.continue_shopping' | t }}
+  </a>
+</div>
+
+{% schema %}
+  {
+    "name": "404 Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle_1",
+        "label": "Sub Title 1"
+      },
+      {
+        "type": "text",
+        "id": "subtitle_2",
+        "label": "Sub Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ]
+  }
+{% endschema %}

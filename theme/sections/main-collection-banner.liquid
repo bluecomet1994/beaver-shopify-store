@@ -1,0 +1,160 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+    }
+    .collection-hero {
+      height: 100% !important;
+      overflow: hidden;
+    }
+    a.ThreeD--button {
+      padding: 6px 9px !important;
+    }
+  }
+  .collection-hero__inner {
+    height: 100%;
+  }
+  .collection-hero {
+    height: 200px;
+    overflow: hidden;
+  }
+  .CollectionImage {
+    max-height: 400px;
+    position: relative;
+  }
+  .CollectionImage img:nth-child(1) {
+    margin-top: 100px;
+  }
+  .CollectionImage img:nth-child(2) {
+    position: absolute;
+    top: -30px;
+  }
+  .CollectionImage img:nth-child(3) {
+    position: absolute;
+    top: -80px;
+    left: 0;
+  }
+  .CollectionImage img:nth-child(4) {
+    position: absolute;
+    top: -50px;
+  }
+  .CollectionImage img:nth-child(5) {
+    position: absolute;
+    bottom: -200px;
+  }
+  .CollectionTabs.page-width {
+    display: flex;
+    gap: 15px;
+  }
+  .CollectionTabs.page-width .active {
+    background: #121212;
+    color: #fff;
+  }
+  .CollectionTabs.page-width a {
+    padding: 10px 30px !important;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .pre-made-button {
+    background-color: #121212;
+    color: white;
+    border: 2px solid #121212 !important;
+  }
+{%- endstyle -%}
+
+<div class="container CollectionTabs d-flex" style="gap: 10px">
+  <a href="/collections/all" class="{% if section.settings.active == 1 %} ThreeD--button pre-made-button tab-button text-white {% else %} ThreeD--button PinkShadow {% endif %}">Pre-made Boxes</a>
+  <a href="/collections/create-your-box" class="{% if section.settings.active == 2 %} ThreeD--button pre-made-button tab-button text-white {% else %} ThreeD--button PinkShadow {% endif %}">Create Your Box</a>
+</div>
+
+<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
+  <div class="container collection-hero__inner row mx-auto px-0">
+    <div class="collection-hero__text-wrapper col-12 col-sm-6">
+      <h1 class="collection-hero__title">
+        {{ section.settings.title }}
+      </h1>
+      <p>{{ section.settings.description }}</p>
+    </div>
+    <div class="col-12 col-sm-6 h-100">
+      <img
+        src={{ section.settings.image | image_url }}
+        alt="banner image"
+        class="w-100 h-100">
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.main-collection-banner.name",
+    "class": "section",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:sections.main-collection-banner.settings.paragraph.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_collection_description",
+        "default": true,
+        "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_collection_image",
+        "default": false,
+        "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+        "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description"
+      }, {
+        "type": "number",
+        "id": "active",
+        "label": "Active Tab",
+        "default": 1
+      }, {
+        "type": "select",
+        "id": "color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          }, {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "background-1",
+        "label": "t:sections.all.colors.label"
+      }
+    ]
+  }
+{% endschema %}

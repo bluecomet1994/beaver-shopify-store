@@ -1,0 +1,101 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+<div class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 px-0">
+        <div class="w-100 contact-info-form">
+          <div class="w-100 contact-detail-form">
+            <h2 class="contact-title py-1">{{ section.settings.contact_title }}</h2>
+            <h3 class="contact-details">Contact Details</h3>
+            <p class="contact-address py-1">{{ section.settings.contact_address }}</p>
+            <p class="contact-item py-1">{%- render 'icon-mail' -%} &nbsp;{{ section.settings.contact_email }}</p>
+            <p class="contact-item py-1">{%- render 'icon-phone' -%} &nbsp;{{ section.settings.contact_phone }}</p>
+          </div>
+          <div class="w-100 contact-detail-back">
+            <img
+              src={{ section.settings.image | image_url }}
+              alt="Contact Detail Background"
+              class="w-100">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6">
+        <div class="w-100 contact-input-form">
+          <h2 class="contact-input-title py-1">{{ section.settings.contact_input_title }}</h2>
+          <p class="contact-input-topic py-1">CONTACT FORM</p>
+          <p class="contact-input-detail py-1">{{ section.settings.contact_input_detail }}</p>
+          <input
+            type="text"
+            name="method"
+            id="contact-method"
+            class="contact-input-item w-100 mb-4 mt-5"
+            placeholder="How should we call you?" />
+          <input
+            type="email"
+            name="email"
+            id="contact-email"
+            class="contact-input-item w-100 my-4"
+            placeholder="Email Address" />
+          <input
+            type="text"
+            name="subject"
+            id="contact-subject"
+            class="contact-input-item w-100 my-4"
+            placeholder="Subject" />
+          <textarea
+            name="message"
+            id=""
+            cols="30"
+            rows="10"
+            class="contact-input-item w-100 my-4"
+            placeholder="Message"></textarea>
+          <button class="button button--primary">SEND MESSAGE</button>
+          <p class="contact-looking-for py-4">Looking for a quick answer?
+            <a href="#">Check our FAQ Page</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Contact Form",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "contact_address",
+        "label": "Address"
+      },
+      {
+        "type": "text",
+        "id": "contact_email",
+        "label": "Email Address"
+      },
+      {
+        "type": "text",
+        "id": "contact_phone",
+        "label": "Phone Number"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Form Background Image"
+      }, {
+        "type": "text",
+        "id": "contact_input_title",
+        "label": "Contact Input Title"
+      }, {
+        "type": "richtext",
+        "id": "contact_input_detail",
+        "label": "Contact Input Detail"
+      }
+    ]
+  }
+{% endschema %}

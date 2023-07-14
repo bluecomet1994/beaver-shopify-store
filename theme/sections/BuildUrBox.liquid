@@ -1,0 +1,88 @@
+<div
+  class="CustomBox">
+  <div
+    class="container px-0">
+    <div
+      class="InfoBlock">
+      <h1>{{ section.settings.section_title }}</h1>
+      <p>{{ section.settings.text }}</p>
+    </div>
+
+    <div
+      class="BoxBlock">
+      <div
+        class="LeftItems"></div>
+      <div
+        class="small-hide">
+        <img
+          class="custom-img"
+          src={{ section.settings.image | img_url }}>
+      </div>
+      <div
+        class="small-show">
+        <img
+          class="w-100"
+          src="https://cdn.shopify.com/s/files/1/0733/7354/8818/files/Component_Box_430x.png?v=1686143259#">
+        <img
+          class="w-100 my-4"
+          src="https://cdn.shopify.com/s/files/1/0733/7354/8818/files/Box-Products_430x.png?v=1686143286">
+      </div>
+      <div
+        class="RightItems"></div>
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+  .InfoBlock {
+    padding-top: 50px;
+    margin-bottom: -50px;
+  }
+  @media screen and (max-width: 749px) {
+    .InfoBlock {
+      padding-top: 50px;
+      margin-bottom: 25px;
+    }
+  }
+  .CustomBox {
+    background: var(--StrongFiller);
+    text-align: center;
+  }
+  .InfoBlock p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .custom-img {
+    width: 100%;
+  }
+{%- endstyle -%}
+
+{% schema %}
+  {
+    "name": "Custom Box",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Title",
+        "default": "Build your Custom Box"
+      }, {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Lorem ipsum dolor sit amet consectetur. Dapibus tincidunt convallis semper ullamcorper. Pharetra convallis nibh netus sed hac.</p>"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:sections.collage.blocks.image.settings.image.label"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "CustomBox",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

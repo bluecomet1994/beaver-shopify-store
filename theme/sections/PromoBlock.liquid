@@ -1,0 +1,219 @@
+<div
+  class="">
+  <div
+    class="Promo container">
+    <div
+      class="row">
+      <div
+        class="col-12 col-sm-6 order-sm-1 order-2">
+        <div
+          class="PromoBlock row">
+          <div
+            class="PromoIMG col-4 col-sm-6 order-sm-1 order-2">
+            <img
+              class="image-1 small-hide"
+              src="https://cdn.shopify.com/s/files/1/0733/7354/8818/files/Component_Box_1_430x.png?v=1686141477">
+            <img
+              class="w-100 small-show"
+              src="https://cdn.shopify.com/s/files/1/0733/7354/8818/files/Group-box_3_201666c8-2e11-4a09-a03c-4f4fb199d0c3_430x.png?v=1686141081">
+          </div>
+          <div
+            class="PromoInfo col-8 col-sm-6 order-sm-2 order-1">
+            <h2
+              class="py-4">{{ section.settings.Heading | escape }}</h2>
+            {{ section.settings.text }}
+            <a
+              class="ThreeD--button OrangeShadow WhiteBG my-4"
+              href="#">Details</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-12 col-sm-6 order-sm-2 order-1 d-flex align-items-center justify-content-center">
+        <div
+          class="Feature-Row row">
+          {%- if section.blocks.size > 0 -%}
+            {%- for block in section.blocks -%}
+              <div
+                class="Feature col-12 col-sm-6">
+                <div
+                  class="d-flex small-show">
+                  {%- if block.settings.IconLink != blank -%}
+                    <img
+                      src="{{ block.settings.IconLink }}">
+                  {%- endif -%}
+
+                  {%- if block.settings.Title != blank -%}
+                    <h4
+                      class="px-4">{{ block.settings.Title }}</h4>
+                  {%- endif -%}
+                </div>
+                <div
+                  class="small-hide">
+                  {%- if block.settings.IconLink != blank -%}
+                    <img
+                      src="{{ block.settings.IconLink }}">
+                  {%- endif -%}
+
+                  {%- if block.settings.Title != blank -%}
+                    <h4>{{ block.settings.Title }}</h4>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.Desc != blank -%}
+                  <p>
+                    {{ block.settings.Desc }}
+                  </p>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+  .Promo {
+    display: flex;
+    padding-top: 50px;
+  }
+  .PromoBlock {
+    background: #FF6400;
+    color: #fff;
+    border: 2px solid #191919;
+  }
+  .PromoIMG {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: center;
+    /* width: 100%; */
+    /* margin-top: -175px; */
+    /* margin-bottom: -60px; */
+  }
+  .PromoIMG .image-1 {
+    margin-top: -80px;
+  }
+  @media screen and (min-width: 750px) {
+    .PromoInfo {
+      padding: 25px 50px 25px 0;
+    }
+  }
+
+  .PromoInfo h2 {
+    font-weight: 600;
+    color: #fff;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  .PromoInfo p {
+    font-size: 19px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .PromoInfo h2 {
+      font-family: Tiempos Headline;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 41px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+    .PromoInfo p {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .Feature {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    .Feature-Row {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  .FeaturesBlock {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    width: 40%;
+  }
+  .Feature h4 {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  .Feature p {}
+{%- endstyle -%}
+
+{% schema %}
+  {
+    "name": "PromoBlock",
+    "class": "index-section",
+    "max_blocks": 4,
+    "settings": [
+      {
+        "type": "text",
+        "id": "Heading",
+        "label": "Heading",
+        "default": "Grab Your Starter Box"
+      }, {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Interested in testing the flavors? Grab a Starter Box including all of our flavours to see which one fits your style and taste!</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "feature",
+        "name": "Feature",
+        "settings": [
+          {
+            "type": "text",
+            "id": "Title",
+            "label": "Title",
+            "default": "Made with Love"
+          }, {
+            "type": "richtext",
+            "id": "Desc",
+            "label": "Text",
+            "default": "<p>Treats created for you to enjoy & cheerish</p>"
+          }, {
+            "type": "text",
+            "id": "IconLink",
+            "label": "Icon Link",
+            "default": "https://cdn.shopify.com/s/files/1/0744/5479/4529/files/Love.svg"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Feature",
+        "category": "Text",
+        "blocks": [
+          {
+            "type": "feature"
+          }, {
+            "type": "feature"
+          }, {
+            "type": "feature"
+          }, {
+            "type": "feature"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

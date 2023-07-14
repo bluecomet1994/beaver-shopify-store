@@ -1,0 +1,126 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}
+    px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}
+    px;
+  }
+  .main-blog-title {
+    font-family: Tiempos Headline;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  @media screen and (max-width: 749px) {
+    .main-blog-title {
+      font-family: Tiempos Headline;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 50px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  }
+  .blog-category {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #58565C;
+    padding-left: 0;
+  }
+  .blog-category-header {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #191919;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}
+      px;
+      padding-bottom: {{ section.settings.padding_bottom }}
+      px;
+    }
+  }
+{%- endstyle -%}
+<div class="featured-blog color-{{section.settings.color_scheme}}">
+  <div class="container blog-news">
+    <h1 class="main-blog-title py-5">{{ section.settings.title }}</h1>
+    <div class="row gx-4 gy-6">
+      {%- for article in blog.articles limit: section.settings.number_of_blogs -%}
+        <div class="blog-article col-12 col-sm-3">
+          {%- render 'article-card', article: article -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Featured Blog",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Beaver Magazine"
+      }, {
+        "type": "range",
+        "id": "number_of_blogs",
+        "label": "Blogs per Page",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "default": 8
+      }, {
+        "type": "select",
+        "id": "color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          }, {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "accent-1",
+        "label": "t:sections.all.colors.label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Blog"
+      }
+    ]
+  }
+{% endschema %}

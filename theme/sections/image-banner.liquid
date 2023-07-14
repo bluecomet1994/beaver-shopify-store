@@ -1,0 +1,49 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'base.css' | asset_url | stylesheet_tag }}
+<div class="container image-banner">
+  <div class="row">
+    <div class="col-12 col-sm-6 d-flex align-items-center">
+      <div class="image-banner-details">
+        <h2 class="image-banner-title py-4">{{ section.settings.title }}</h2>
+        <p class="image-banner-desc py-4">{{ section.settings.description }}</p>
+        <button class="image-banner-btn button button--primary my-4">BROWSE TREATS</button>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 px-0">
+      <img
+        class="image-banner-logo small-hide"
+        src={{ section.settings.image | image_url }}
+        alt="Snack logo Image">
+      <img
+        class="image-banner-logo small-show"
+        src={{ section.settings.mobile_image | image_url }}
+        alt="Snack logo Image">
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image Banner",
+    "class": "section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile_Image"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,113 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+<div class="product-all py-5">
+  <div class="container">
+    <div class="row product-content gx-6 gy-4">
+      {%- paginate section.settings.collection.products by section.settings.products_per_page -%}
+        {% for product in section.settings.collection.products %}
+          <div class="product col-6 col-sm-6 col-md-3">
+            <div class="card">
+              {% render 'card-product'
+               , card_product: product,
+               media_aspect_ratio: section.settings.image_ratio,
+               show_secondary_image: section.settings.show_secondary_image,
+               show_vendor: section.settings.show_vendor,
+               show_rating: section.settings.show_rating,
+               show_quick_add: section.settings.enable_quick_add,
+               section_id: section.id %}
+            </div>
+          </div>
+        {% endfor %}
+        {%- if paginate.pages > 1 -%}
+          {% render 'pagination', paginate: paginate, anchor: '' %}
+        {%- endif -%}
+        {% comment %} <div
+        class="d-flex justify-content-center"
+        style="gap: 15px">
+        {{- paginate | default_pagination }}
+        </div> {% endcomment %}
+      {%- endpaginate -%}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Products All",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "t:sections.featured-collection.settings.collection.label"
+      },
+      {
+        "type": "range",
+        "id": "products_per_page",
+        "min": 1,
+        "max": 36,
+        "step": 1,
+        "default": 8,
+        "label": "Products Per Page"
+      },
+      {
+        "type": "range",
+        "id": "products_per_row",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 4,
+        "label": "Products Per Row"
+      },
+      {
+        "type": "select",
+        "id": "image_ratio",
+        "options": [
+          {
+            "value": "adapt",
+            "label": "t:sections.featured-collection.settings.image_ratio.options__1.label"
+          }, {
+            "value": "portrait",
+            "label": "t:sections.featured-collection.settings.image_ratio.options__2.label"
+          }, {
+            "value": "square",
+            "label": "t:sections.featured-collection.settings.image_ratio.options__3.label"
+          }
+        ],
+        "default": "adapt",
+        "label": "t:sections.featured-collection.settings.image_ratio.label"
+      }, {
+        "type": "checkbox",
+        "id": "show_secondary_image",
+        "default": false,
+        "label": "t:sections.featured-collection.settings.show_secondary_image.label"
+      }, {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "default": false,
+        "label": "t:sections.featured-collection.settings.show_vendor.label"
+      }, {
+        "type": "checkbox",
+        "id": "show_rating",
+        "default": false,
+        "label": "t:sections.featured-collection.settings.show_rating.label",
+        "info": "t:sections.featured-collection.settings.show_rating.info"
+      }, {
+        "type": "checkbox",
+        "id": "enable_quick_add",
+        "default": false,
+        "label": "t:sections.featured-collection.settings.enable_quick_buy.label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Products All"
+      }
+    ]
+  }
+{% endschema %}

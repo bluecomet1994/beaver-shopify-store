@@ -1,0 +1,170 @@
+<div
+  class="term-card">
+  <div
+    class="container px-0">
+    <div
+      class="color-{{ section.settings.color_scheme }} team-card-main text-black">
+      <div
+        class="term-card-content row align-items-center px-5 ">
+        <div
+          class="term-card-desc col-12 col-md-9">
+          <p>{{ section.settings.text_1 }}</p>
+          <h1
+            style="term-card-title color: black">{{ section.settings.section_title }}</h1>
+        </div>
+        <div
+          class="col-12 col-md-3 text-center">
+          <p>{{ section.settings.text_2 }}</p>
+          <a
+            href="#"
+            class="button button--primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+  .team-card-main {
+    margin: 2.5rem;
+  }
+  @media screen and (max-width: 749px) {
+    .team-card-main {
+      margin: 0;
+    }
+    .term-card-content {
+      height: 100% !important;
+      padding: 25px;
+    }
+    .term-card-title {
+      font-family: Tiempos Headline;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 41px;
+      letter-spacing: 0;
+      text-align: left;
+      color: #191919 !important;
+    }
+    .term-card-desc {
+      font-family: Tiempos Headline;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0;
+      text-align: left;
+      color: #191919 !important;
+    }
+  }
+  .term-card-content {
+    height: 204px;
+  }
+  .InfoBlock {
+    padding-top: 50px;
+    margin-bottom: -50px;
+  }
+  .CustomBox {
+    background: var(--StrongFiller);
+    text-align: center;
+  }
+  .InfoBlock p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .custom-img {
+    width: 100%;
+  }
+  .term-card-content {
+    background: url('{{ section.settings.image | image_url }}') no-repeat 100% 100%;
+    background-position: inherit;
+  }
+  .term-card-main {
+    max-width: 1180px;
+  }
+  .term-card h1 {
+
+    font-family: 'Tiempos Headline';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 65px;
+    color: #191919 !important;
+    /* identical to box height */
+  }
+
+  .term-card p {
+    font-family: Tiempos Headline;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+{%- endstyle -%}
+
+{% schema %}
+  {
+    "name": "Term Card",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Title",
+        "default": "Build your Custom Box"
+      },
+      {
+        "type": "richtext",
+        "id": "text_1",
+        "label": "Text",
+        "default": "<p>Lorem ipsum dolor sit amet consectetur. Dapibus tincidunt convallis semper ullamcorper. Pharetra convallis nibh netus sed hac.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "text_2",
+        "label": "Text",
+        "default": "<p>Lorem ipsum dolor sit amet consectetur. Dapibus tincidunt convallis semper ullamcorper. Pharetra convallis nibh netus sed hac.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:sections.collage.blocks.image.settings.image.label"
+      }, {
+        "type": "select",
+        "id": "color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          }, {
+            "value": "yellow",
+            "label": "Yellow"
+          }, {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "background-1",
+        "label": "t:sections.all.colors.label",
+        "info": "t:sections.image-banner.settings.color_scheme.info"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "Term Card",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

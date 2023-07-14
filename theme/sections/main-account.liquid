@@ -1,0 +1,91 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}
+    px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}
+    px;
+  }
+  .customer-account-hr {
+    height: 2px;
+    background-color: #191919;
+    opacity: 1 !important;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}
+      px;
+      padding-bottom: {{ section.settings.padding_bottom }}
+      px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="container customer-account my-5">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="customer-account-nav mx-4">
+        {%- render 'customer-account-nav' -%}
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="customer-main-content mx-4">
+        <div class="account-dashboard-image small-hide">
+          <img
+            class="account-dashboard-logo w-100"
+            src="https://cdn.shopify.com/s/files/1/0733/7354/8818/files/Image_430x.svg?v=1686084946"
+            alt="">
+        </div>
+        <div class="tab-content">
+          <div
+            class="tab-pane fade show active"
+            id="nav-dashboard"
+            role="tabpanel">
+            {%- render 'customer-account-dashboard' -%}
+            <hr class="customer-account-hr" />
+            {%- render 'customer-account-last-order' -%}
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-details"
+            role="tabpanel">
+            {%- render 'customer-account-details' -%}
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-orders"
+            role="tabpanel">
+            {%- render 'customer-account-orders' -%}
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-newsletter"
+            role="tabpanel">
+            {%- render 'customer-account-newsletter' -%}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-3">
+      <div class="customer-account-feed mx-4">
+        {%- render 'customer-account-feed', card-products: section.settings.collection.products -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.main-account.name",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection For Feed"
+      }
+    ]
+  }
+{% endschema %}

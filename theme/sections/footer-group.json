@@ -1,0 +1,64 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "0b31c7ed-101a-4f4a-9a23-9fb6f68b101a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beaver_Treats_-_Logo_Vertical_1.svg",
+            "image_width": 210,
+            "logo_desc": "We strive to provide only the highest quality Treats & Snacks online. We stand by our products unconditionally.",
+            "alignment": ""
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Quick links<\/strong>",
+            "menu": "footer"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Info<\/strong>",
+            "menu": "customer-care-footer-menu"
+          }
+        },
+        "footer-2": {
+          "type": "text",
+          "settings": {
+            "heading": "<strong>Get In Touch<\/strong>",
+            "subtext": "<p><strong>Beaver Treats<\/strong><br\/>Marion County 4002<br\/>Yellville, Arkansas (AR), 72687<br\/><br\/><strong>contact@beavertreats.com<br\/>(870) 449-6267<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "0b31c7ed-101a-4f4a-9a23-9fb6f68b101a",
+        "footer-0",
+        "footer-1",
+        "footer-2"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "newsletter_enable": true,
+        "newsletter_heading": "",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 48,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

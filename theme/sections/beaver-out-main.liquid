@@ -1,0 +1,79 @@
+{%- style -%}
+  .beaver-out {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .beaver-out-header {
+    display: inline-block;
+    max-width: 780px;
+  }
+  .beaver-out-title {
+    font-family: Tiempos Headline;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .beaver-out-description {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+{%- endstyle -%}
+
+<div class="beaver-out my-4">
+  <div class="container text-center">
+    <div class="beaver-out-header py-4">
+      <h2 class="beaver-out-title">Who let the Beavers out?</h2>
+      <p class="beaver-out-description">Follow us on instagram for exclusive promotion and product launches along with cool news and tasty images for you to enjoy on your instagram feed @beavertreats</p>
+      <p>{%- render 'icon-instagram' -%}&nbsp;@Beavertreats</p>
+    </div>
+    <div class="row gx-4 gy-4 small-hide">
+      {%- for product in section.settings.collection.products limit: section.settings.number_of_products -%}
+        <div class="col-sm">
+          <img
+            src={{ product.featured_media | image_url }}
+            alt="beaver out image"
+            class="beaver-out-image w-100" />
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="row gx-4 gy-4 small-show">
+      {%- for product in section.settings.collection.products limit: 4 -%}
+        <div class="col-6">
+          <img
+            src={{ product.featured_media | image_url }}
+            alt="beaver out image"
+            class="beaver-out-image w-100" />
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Beaver Out Main",
+    "settings": [
+      {
+        "type": "number",
+        "id": "number_of_products",
+        "label": "Number Of Products",
+        "default": 5
+      }, {
+        "type": "collection",
+        "id": "collection",
+        "label": "Beaver t:sections.featured-collection.settings.collection.label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Beaver Out Main"
+      }
+    ]
+  }
+{% endschema %}
